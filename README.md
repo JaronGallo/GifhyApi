@@ -1,1 +1,1 @@
-# GifhyApi
+# GiphyApi
