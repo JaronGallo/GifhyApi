@@ -15,17 +15,7 @@ window.onload = function() {
               var results = response.data;
            
               $("#sports-view").empty();
-
-             
-
-
-
-
-
-
-
-
-
+		
               for (var i = 0; i < results.length; i++) { 
                 var sportDiv = $("<div class='sport'>");
 			var whatImg = i;
@@ -42,12 +32,9 @@ window.onload = function() {
          	
             $("#sports-view").prepend(sportDiv);
 
-
-
           }
  			
-
-			$("img").click(function(){
+	$("img").click(function(){
 				// console.log(this);
             
             var check = $(this).attr('id');
@@ -57,12 +44,7 @@ window.onload = function() {
             $(this).attr("src", moving);
             var isPlaying = true;
 
-
-
-
              });
-
-
         });
       }
       function renderButtons() {
@@ -83,16 +65,14 @@ window.onload = function() {
         $("#buttons-view").append(a);
         }
 
-
       }
-
         $("#add-sport").on("click", function(event) {
           event.preventDefault();
           var sport = $("#sport-input").val().trim();
 
-if (sport===""){
+	if (sport===""){
 	return;
-} else {
+	} else {
 
           
           sports.push(sport);
@@ -103,84 +83,4 @@ if (sport===""){
 
         renderButtons();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 };
-
-
-
-
- // counter = 0;
-// // Create a button==========================================
- 
-//     $("#btn1").on("click", function() {
-//       event.preventDefault();
-      
-//        var newBtn = $("input").val().trim();
-//         var button = $("<button>").attr("data-sports", newBtn).attr('id', "item");
-
-//         $("#buttons-appear-here").append(button);
-//         counter++;
-//             button.text(newBtn);
-        
-//         $("#input-text").val("");
-//     });
-        
-//         $("button[id=item]").on("click", function() {
-// // AJAX======================================================
-//         var sports = $(this).attr("data-sports");
-//         var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
-//         sports + "&api_key=dc6zaTOxFJmzC&limit=10";
-//         $.ajax({
-//           url: queryURL,
-//           method: "GET"
-//         })
-//         .done(function(response) { 
-
-        
-//             console.log(response);
-//             console.log(queryURL);
-//         var results = response.data;
-//         // var topic = ["Baseball", "football", "basketball"];
-// // LOOP=========================================
-//          for (var i = 0; i < results.length; i++) {
-//               var image = $("<img>");
-//               var div = $("<div>");
-//               var p = $("<p>").text("Rating: " + results[i].rating);
-//               image.attr("src", results[i].images.fixed_height.url);
-
-//               div.append(p);
-//               div.append(image);
-//               $("#gifs-appear-here").append(div);
-//               }
-//     });
-
-
-
-
-
-// });
-
-//   
